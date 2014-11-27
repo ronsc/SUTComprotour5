@@ -206,3 +206,29 @@ Stack trace:
 REQUEST_URI=/comptour/app/index.php?r=Site/Registration
 HTTP_REFERER=http://localhost/comptour/app/
 ---
+2014/11/06 12:53:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Site\Registration".' in C:\MAMP\htdocs\comptour\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\MAMP\htdocs\comptour\framework\web\CWebApplication.php(141): CWebApplication->runController('Site\\Registrati...')
+#1 C:\MAMP\htdocs\comptour\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\MAMP\htdocs\comptour\app\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/comptour/app/index.php?r=Site\Registration
+HTTP_REFERER=http://localhost/comptour/app/index.php?r=Site/Property
+---
+2014/11/24 21:17:47 [error] [php] Undefined variable: criteria (C:\MAMP\htdocs\comptour\app\protected\views\site\list.php:4)
+Stack trace:
+#0 C:\MAMP\htdocs\comptour\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\MAMP\htdocs\comptour\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\MAMP\htdocs\comptour\app\protected\controllers\SiteController.php(161): SiteController->render()
+#3 C:\MAMP\htdocs\comptour\framework\web\actions\CInlineAction.php(49): SiteController->actionList()
+#4 C:\MAMP\htdocs\comptour\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\MAMP\htdocs\comptour\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\MAMP\htdocs\comptour\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\MAMP\htdocs\comptour\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\MAMP\htdocs\comptour\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\MAMP\htdocs\comptour\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\MAMP\htdocs\comptour\app\index.php(13): CWebApplication->run()
+REQUEST_URI=/comptour/app/index.php?r=site/list
+in C:\MAMP\htdocs\comptour\app\protected\views\site\list.php (4)
+in C:\MAMP\htdocs\comptour\app\protected\controllers\SiteController.php (161)
+in C:\MAMP\htdocs\comptour\app\index.php (13)

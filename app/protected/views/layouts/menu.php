@@ -25,7 +25,7 @@
           </a>
         </li>
         <li>
-          <a href="#">กำหนดการ</a>
+          <a href="index.php?r=Site/Table">กำหนดการ</a>
         </li>
         <li>
           <a href="index.php?r=Site/Property">คุณสมบัติผู้เข้าแข่งขัน</a>

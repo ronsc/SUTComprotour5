@@ -5,6 +5,14 @@
 
 <div class="jumbotron">
   <h1>SUT COMPRO TOURNAMENT #5</h1>
+  <h2 align="center" style="font-size: 28pt">
+    <mark>
+      <span class="glyphicon glyphicon-asterisk"></span>
+      <u>รับเพียง 20 ทีม เท่านั้น</u>
+      <span class="glyphicon glyphicon-asterisk"></span>
+    </mark>
+    <br /><br />
+  </h2>
   <p align="center">
   	<img src="images/logo.jpg" class="img-responsive img-thumbnail" alt="Responsive image">
   </p>

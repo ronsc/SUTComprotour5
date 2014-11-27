@@ -1,8 +1,4 @@
-<?php
-/* @var $this TeamsController */
-/* @var $model Teams */
-/* @var $form CActiveForm */
-?>
+<?php if($total < 20 && $date): ?>
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'teams-Registration-form',
@@ -152,3 +148,18 @@
 </div>
 
 <?php $this->endWidget(); ?>
+
+<?php else: ?>
+
+<h1 align="center" style="margin: 50px 0 50px 0; font-size: 36pt">
+	<span class="label label-danger">
+		ปิดรับสมัครทีมผู้เข้าแข่งขัน
+	</span>
+</h1>
+
+<div align="center">
+<?php echo CHtml::image('images/close.gif', '', array(
+	'style' => 'margin-bottom: 50px;',
+)); ?>
+</div>
+<?php endif; ?>

@@ -114,14 +114,24 @@ class SiteController extends Controller
 	    if(isset($_POST['Teams'])) {
 	        $model->attributes=$_POST['Teams'];
 	        if($model->validate()) {
-	            // form inputs are valid, do something here
-	            $model->save();
-	            return;
+	            if($model->save()){
+	            	$this->redirect(array('site/teams'));
+	            }
 	        }
+	    }
+
+	    $start = date("Y-m-d");
+	    $end = date("2014-11-24");
+	    if($start <= $end) {
+	    	$date = 1;
+	    } else {
+	    	$date = 0;
 	    }
 
 		$this->render('registration', array(
 			'model' => $model,
+			'total' => Teams::model()->count(),
+			'date' => $date,
 		));
 	}
 
@@ -137,6 +147,22 @@ class SiteController extends Controller
 		$this->render('teams', array(
 			'model' => $model,
 		));
+	}
+
+	public function actionTable() {
+		$this->render('table');
+	}
+
+	public function actionList() {
+        $model = new CActiveDataProvider('Teams', array(
+        	'pagination'	=>	array(
+				'pageSize'	=>	30
+            ),
+        ));
+
+        $this->render('list', array(
+        	'model' => $model
+        ));
 	}
 
 }
